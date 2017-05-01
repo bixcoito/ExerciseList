@@ -1,22 +1,29 @@
 #include <iostream>
-#include <stdlib.h>
 using namespace std;
 
-float calc_media (float *notas );
+int maior_valor (int valor1, int valor2);
 
-#define ATE_NOTA 5
-
-int main(){
-	float notas [5];
-	
-	for(int percorre = 0; percorre < ATE_NOTA; percorre++){
-		cout << "Digite a Nota " << percorre << ":" << endl;
-		cin >> notas [percorre];
-	}
-	
-	calc_media(float *notas);
-	
+int main()
+{
+/*
+Programa MAIOR VALOR.
+O usuário digita dois valores e o programa diz qual é o maior.
+Dicas: Você precisa enviar alguma informação para a função?
+Dicas: Quais informações precisam ser passadas? (Não use variáveis globais!)
+*/
+int valor1, valor2;
+cout << "Digite o primeiro valor:" << endl;
+cin >> valor1;
+cout << "Digite o segundo valor:" << endl;
+cin >> valor2;
+// ----- VERIFICA QUAL O MAIOR VALOR ENTRE valor1 E valor2 -----
+maior_valor( valor1, valor2);
+// O bloco termina aqui.
 }
-float calc_media (flot *notas){
+int maior_valor(int valor1, int valor2){
+	if (valor1 > valor2) cout << "O primeiro valor é maior que o segundo" << endl;
+	else if (valor2 > valor1) cout << "O segundo valor é maior que o primeiro" << endl;
+	else cout << "Os valores são iguais" << endl;
 	
+	return valor1, valor2;
 }

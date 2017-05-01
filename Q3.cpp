@@ -1,44 +1,33 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
-int main(){
-	string nome [3];
-	string nome_rua [3];
-	
-	cout << "Digite os 3 Nomes" << endl;
-	
-	for(int percorre = 0; percorre < 3; percorre++){
-		cin >> nome[percorre];
-	}
-	
-	system("cls");
-	
-	/*
-	cout << "Digite o nome 2" << endl;
-	cin >> nome[1];
-	cout << "Digite o nome 3" << endl;
-	cin >> nome[2];
-	*/
-	for (int percorre = 0; percorre < 3; percorre++){
-		cout << "Digite os 3 Endereços Correspondente aos Nomes" << endl;
-		cin >> nome_rua[percorre];
-	}
-	
-	/*
-	cout << "Digite o endereço 2" << endl;
-	cin >> nome[1];
-	cout << "Digite o endereço 3" << endl;
-	cin >> nome[2];
-	*/
-	system ("cls");
-	
-	for(int percorre = 0; percorre < 3; percorre++){
-		cout << nome [percorre] << " mora na rua " << nome_rua [percorre] << endl;
-	}
-	/*	
-	cout << nome [1] << " mora na rua " << nome_rua [1] << endl;
-	cout << nome [2] << " mora na rua " << nome_rua [2] << endl;
-	*/
+void divide_numero(int num);
+
+int main()
+{
+/*
+Programa DIVISAO POR DOIS
+O programa lê um número e divide por dois (sucessivamente) até que
+o resultado seja menor que 1.
+Mostra o resultado de cada divisão e a quantidade de divisões efetuadas.
+Dicas: Você precisa enviar alguma informação para a função?
+Dicas: Quais informações precisam ser passadas? (Não use variáveis globais!)
+*/
+int num;
+cout << "Digite o numero que deseja dividir:" << endl;
+cin >> num;
+// ----- DIVIDE UM NÚMERO POR DOIS SUCESSIVAS VEZES -----
+divide_numero(num);
+
+}
+void divide_numero(int num){
+	int quantidade = 0;
+	while (num > 0)
+	{
+		num /= 2;
+		cout << "Resultado divisao: " << num << endl;
+		quantidade++;
+	} 
+	cout << "Foram feitas um total de "	<< quantidade << "	divisoes" << endl;
+		
 }
